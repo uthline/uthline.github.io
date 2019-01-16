@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Extend Filters | uthline.github.io</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Extend Filters" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="uthline’s github. https://github.uthline.net" />
+<meta property="og:description" content="uthline’s github. https://github.uthline.net" />
+<link rel="canonical" href="http://localhost:4000/docs/plugins/filters.html" />
+<meta property="og:url" content="http://localhost:4000/docs/plugins/filters.html" />
+<meta property="og:site_name" content="uthline.github.io" />
+<script type="application/ld+json">
+{"description":"uthline’s github. https://github.uthline.net","@type":"WebPage","url":"http://localhost:4000/docs/plugins/filters.html","headline":"Extend Filters","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=7343465b631836d2d2d60025b6b5f7b3a225a087">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">uthline.github.io</a></h1>
+      
+
+      <h1 id="extend-filters">Extend Filters</h1>
+
+<p>Filters are essentially functions that can be applied to variables. They are called with a pipe operator (<code class="highlighter-rouge">|</code>) and can take arguments.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+</code></pre></div></div>
+
+<h3 id="defining-a-new-filter">Defining a new filter</h3>
+
+<p>Plugins can extend filters by defining custom functions in their entry point under the <code class="highlighter-rouge">filters</code> scope.</p>
+
+<p>A filter function takes as first argument the content to filter, and should return the new content.
+Refer to <a href="/docs/plugins/api.html">Context and APIs</a> to learn more about <code class="highlighter-rouge">this</code> and GitBook API.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">filters</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">hello</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s1">'Hello '</span><span class="o">+</span><span class="nx">name</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>The filter <code class="highlighter-rouge">hello</code> can then be used in the book:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Aaron, how are you?
+</code></pre></div></div>
+
+<h3 id="handling-block-arguments">Handling block arguments</h3>
+
+<p>Arguments can be passed to filters:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello Samy }}
+</code></pre></div></div>
+
+<p>Arguments are passed to the function, named-arguments are passed as a last argument (object).</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">filters</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">fullName</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">,</span> <span class="nx">kwargs</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">firstName</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">lastName</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nx">kwargs</span><span class="p">.</span><span class="nx">man</span><span class="p">)</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Mr"</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+            <span class="k">else</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Mrs"</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+
+            <span class="k">return</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

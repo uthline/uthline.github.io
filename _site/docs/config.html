@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Configuration | uthline.github.io</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Configuration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="uthline’s github. https://github.uthline.net" />
+<meta property="og:description" content="uthline’s github. https://github.uthline.net" />
+<link rel="canonical" href="http://localhost:4000/docs/config.html" />
+<meta property="og:url" content="http://localhost:4000/docs/config.html" />
+<meta property="og:site_name" content="uthline.github.io" />
+<script type="application/ld+json">
+{"description":"uthline’s github. https://github.uthline.net","@type":"WebPage","url":"http://localhost:4000/docs/config.html","headline":"Configuration","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=7343465b631836d2d2d60025b6b5f7b3a225a087">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">uthline.github.io</a></h1>
+      
+
+      <h1 id="configuration">Configuration</h1>
+
+<p>GitBook allows you to customize your book using a flexible configuration. These options are specified in a <code class="highlighter-rouge">book.json</code> file. For authors unfamiliar with the JSON syntax, you can validate the syntax using tools such as <a href="http://jsonlint.com">JSONlint</a>.</p>
+
+<h3 id="general-settings">General Settings</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">root</code></td>
+      <td>Path to the root folder containing all the book’s files, except <code class="highlighter-rouge">book.json</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">structure</code></td>
+      <td>To specify paths for Readme, Summary, Glossary etc. See <a href="#structure">Structure paragraph</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td>Title of your book, default value is extracted from the README. On legacy.gitbook.com this field is pre-filled.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">description</code></td>
+      <td>Description of your book, default value is extracted from the README. On legacy.gitbook.com this field is pre-filled.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">author</code></td>
+      <td>Name of the author. On legacy.gitbook.com this field is pre-filled.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">isbn</code></td>
+      <td>ISBN of the book</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">language</code></td>
+      <td><a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO code</a> of the book’s language, default value is <code class="highlighter-rouge">en</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">direction</code></td>
+      <td>Text’s direction. Can be <code class="highlighter-rouge">rtl</code> or <code class="highlighter-rouge">ltr</code>, the default value depends on the value of <code class="highlighter-rouge">language</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gitbook</code></td>
+      <td>Version of GitBook that should be used. Uses the <a href="http://semver.org">SemVer</a> specification and accepts conditions like <code class="highlighter-rouge">"&gt;= 3.0.0"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="plugins">Plugins</h3>
+
+<p>Plugins and their configurations are specified in the <code class="highlighter-rouge">book.json</code>. See <a href="/docs/plugins/">the plugins section</a> for more details.</p>
+
+<p>Since version 3.0.0, GitBook can use themes. See <a href="/docs/themes/">the theming section</a> for more details.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">plugins</code></td>
+      <td>List of plugins to load</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pluginsConfig</code></td>
+      <td>Configuration for plugins</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="structure">Structure</h3>
+
+<p>In addition to the <code class="highlighter-rouge">root</code> variable, you can tell Gitbook the name of the files for Readme, Summary, Glossary, Languages (instead of using the default names such as <code class="highlighter-rouge">README.md</code>).
+These files must be at the root of your book (or the root of every language book). Paths such as <code class="highlighter-rouge">dir/MY_README.md</code> are not accepted.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">structure.readme</code></td>
+      <td>Readme file name (defaults to <code class="highlighter-rouge">README.md</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">structure.summary</code></td>
+      <td>Summary file name (defaults to <code class="highlighter-rouge">SUMMARY.md</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">structure.glossary</code></td>
+      <td>Glossary file name (defaults to <code class="highlighter-rouge">GLOSSARY.md</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">structure.languages</code></td>
+      <td>Languages file name (defaults to <code class="highlighter-rouge">LANGS.md</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="pdf-options">PDF Options</h3>
+
+<p>PDF Output can be customized using a set of options in the <code class="highlighter-rouge">book.json</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.pageNumbers</code></td>
+      <td>Add page numbers to the bottom of every page (default is <code class="highlighter-rouge">true</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.fontSize</code></td>
+      <td>Base font size (default is <code class="highlighter-rouge">12</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.fontFamily</code></td>
+      <td>Base font family (default is <code class="highlighter-rouge">Arial</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.paperSize</code></td>
+      <td>Paper size, options are <code class="highlighter-rouge">'a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b0', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'legal', 'letter'</code> (default is <code class="highlighter-rouge">a4</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.margin.top</code></td>
+      <td>Top margin (default is <code class="highlighter-rouge">56</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.margin.bottom</code></td>
+      <td>Bottom margin (default is <code class="highlighter-rouge">56</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.margin.right</code></td>
+      <td>Right margin (default is <code class="highlighter-rouge">62</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pdf.margin.left</code></td>
+      <td>Left margin (default is <code class="highlighter-rouge">62</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>GitBook FAQ | uthline.github.io</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="GitBook FAQ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="uthline’s github. https://github.uthline.net" />
+<meta property="og:description" content="uthline’s github. https://github.uthline.net" />
+<link rel="canonical" href="http://localhost:4000/docs/faq.html" />
+<meta property="og:url" content="http://localhost:4000/docs/faq.html" />
+<meta property="og:site_name" content="uthline.github.io" />
+<script type="application/ld+json">
+{"description":"uthline’s github. https://github.uthline.net","@type":"WebPage","url":"http://localhost:4000/docs/faq.html","headline":"GitBook FAQ","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=7343465b631836d2d2d60025b6b5f7b3a225a087">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">uthline.github.io</a></h1>
+      
+
+      <h1 id="gitbook-faq">GitBook FAQ</h1>
+
+<p>This page gathers common questions and answers concerning the GitBook format and toolchain.</p>
+
+<p>Questions about the legacy platform at legacy.gitbook.com and the Editor are gather into the <a href="http://help.legacy.gitbook.com/faq.html">help.legacy.gitbook.com’s FAQ</a>.</p>
+
+<h4 id="how-can-i-hostpublish-my-book">How can I host/publish my book?</h4>
+
+<p>Books can easily be published and hosted on <a href="https://legacy.gitbook.com">legacy.gitbook.com</a>. But GitBook output can be hosted on any static file hosting solution.</p>
+
+<h4 id="what-can-i-use-to-edit-my-content">What can I use to edit my content?</h4>
+
+<p>Any text editor should work! But we advise using the <a href="https://legacy.gitbook.com/editor">GitBook Editor</a>. <a href="https://legacy.gitbook.com">legacy.gitbook.com</a> also provides a web version of this editor.</p>
+
+<hr />
+
+<h4 id="does-gitbook-supports-rtlbi-directional-text-">Does GitBook supports RTL/bi-directional text ?</h4>
+
+<p>The GitBook format supports right to left, and bi-directional writing. To enable it, you either need to specify a language (ex: <code class="highlighter-rouge">ar</code>), or force GitBook to use RTL in your <code class="highlighter-rouge">book.json</code>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ar"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"direction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rtl"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>With version 3.0 of GitBook, it’s automatically detected according to the content.
+<em>Note that, while the output book will indeed respect RTL, the Editor doesn’t support RTL writing yet</em>.</p>
+
+<h4 id="should-i-use-an-html-or-md-extensions-in-my-links">Should I use an <code class="highlighter-rouge">.html</code> or <code class="highlighter-rouge">.md</code> extensions in my links?</h4>
+
+<p>You should always use paths and the <code class="highlighter-rouge">.md</code> extensions when linking to your files, GitBook will automatically replace these paths by the appropriate link when the pointing file is referenced in the Table of Contents.</p>
+
+<h4 id="can-i-create-a-gitbook-in-a-sub-directory-of-my-repository">Can I create a GitBook in a sub-directory of my repository?</h4>
+
+<p>Yes, GitBooks can be created in <a href="/docs/structure.html#subdirectory">sub-directories</a>. legacy.gitbook.com and the CLI also looks by default in a serie of <a href="/docs/structure.html">folders</a>.</p>
+
+<h4 id="does-gitbook-supports-rtl-languages">Does GitBook supports RTL languages?</h4>
+
+<p>Yes, GitBook automatically detect the direction in your pages (<code class="highlighter-rouge">rtl</code> or <code class="highlighter-rouge">ltr</code>) and adjust the layout accordingly. The direction can also be specified globally in the <a href="/docs/config.html">book.json</a>.</p>
+
+<hr />
+
+<h4 id="does-gitbook-support-math-equations">Does GitBook support Math equations?</h4>
+
+<p>GitBook supports math equations and TeX thanks to plugins. There are currently 2 official plugins to display math: <a href="https://plugins.gitbook.com/plugin/mathjax">mathjax</a> and <a href="https://plugins.gitbook.com/plugin/katex">katex</a>.</p>
+
+<h4 id="can-i-customizetheme-the-output">Can I customize/theme the output?</h4>
+
+<p>Yes, both the website and ebook outputs can be customized using <a href="/docs/themes/">themes</a>.</p>
+
+<h4 id="can-i-add-interactive-content-videos-etc">Can I add interactive content (videos, etc)?</h4>
+
+<p>GitBook is very <a href="/docs/plugins/">extensible</a>. You can use <a href="https://plugins.gitbook.com">existing plugins</a> or create your own!</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
